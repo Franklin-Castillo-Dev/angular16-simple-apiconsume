@@ -1,0 +1,19 @@
+<h1>Alumnos</h1>
+
+<!-- Renderizamos si viene Alumno-->
+<!-- *ngIf = Condicional para verificar datos, y evitar crasheos -->
+<!-- ng-container = Se utiliza por si se quiere evitar usar un div, y no quere ninguna anidacion extra html -->
+<ng-container *ngIf="alumno">
+    <!-- Renderizar  Texto -->
+    <h2>{{ alumno.id }}</h2>
+    <p>{{ alumno.nombre }}</p>
+    <p>{{ alumno.apellido }}</p>
+
+        
+        
+</ng-container>
+<!-- Si no hay Alumnos, imprime esto otro -->
+<ng-container *ngIf="!alumno">
+    Producto no encontrado.
+</ng-container>
+

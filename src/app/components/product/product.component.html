@@ -1,0 +1,19 @@
+<h1>Productos</h1>
+
+<!-- Renderizamos si viene producto-->
+<!-- *ngIf = Condicional para verificar datos, y evitar crasheos -->
+<!-- ng-container = Se utiliza por si se quiere evitar usar un div, y no quere ninguna anidacion extra html -->
+<ng-container *ngIf="product">
+    <!-- Renderizar  Texto -->
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price }}</p>
+
+        <!-- Renderizar Propiedades -->
+        <img [ngSrc]="product.images[0]" alt="imagen producto" width="640" height="480">
+        
+</ng-container>
+<!-- Si no hay productos, imprime esto otro -->
+<ng-container *ngIf="!product">
+    Producto no encontrado.
+</ng-container>
+

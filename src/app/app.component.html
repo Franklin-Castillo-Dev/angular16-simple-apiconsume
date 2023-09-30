@@ -1,0 +1,19 @@
+<h1>hola fran {{title}}</h1>
+
+<button (click)="changeTitle()">Cambiar</button>
+
+<!-- Componente Producto-->
+
+<app-product 
+    *ngFor="let product of products" 
+        [product]="product"
+></app-product>
+
+
+<!-- Componente Alumno-->
+<!--
+<app-alumno 
+    *ngFor="let alumno of alumnos"
+        [alumno]="alumno"
+></app-alumno>
+-->
